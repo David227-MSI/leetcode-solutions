@@ -1,8 +1,14 @@
-# Leetcode Solutions (Java)
+# LeetCode Solutions (Java & SQL)
 
-This repository contains my Java solutions for selected LeetCode problems.
+This repository contains my personal solutions for LeetCode problems, mainly in **Java**, with some **SQL** solutions.
 
-## Structure
+## 📂 Folder Structure
 
-- All source code is located under `src/leetcode/`
-- Each file corresponds to one problem.
+
+## ✅ Notes
+- Java solutions: `LC題號_英文題名.java`
+- SQL solutions: `LC題號_英文題名.sql`
+- Each file contains the problem information in the header comments.
+
+## 📈 LeetCode Profile
+[My LeetCode CN Profile](https://leetcode.cn/u/elated-shterndtr/)
