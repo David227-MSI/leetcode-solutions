@@ -3,3 +3,30 @@
 // 題目連結：https://leetcode.cn/problems/count-subarrays-where-max-element-appears-at-least-k-times/
 // 題目類型：滑動窗口 / 中等
 
+class Solution {
+    public long countSubarrays(int[] nums, int k) {
+        // 計算最大數字
+        int max = 0;
+        for (int num : nums) {
+            max = Math.max(num, max);
+        }
+        long ans = 0;
+        int contMax = 0, left = 0;
+        // 最大數字個數
+        for (int mx : nums) {
+            if (mx == max) {
+                contMax++;
+            }
+            // 不符合條件，從左邊窗口開始移除，如數字同最大值，將統計數量扣除
+            while (contMax == k) {
+                if (nums[left] == max) {
+                    contMax--;
+                }
+                left++;
+            }
+            // 右邊固定，數量為左到右所有數組
+            ans += left;
+        }
+        return ans;
+    }
+}
