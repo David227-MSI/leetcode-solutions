@@ -17,7 +17,7 @@ class Solution {
             if (mx == max) {
                 contMax++;
             }
-            // 不符合條件，從左邊窗口開始移除，如數字同最大值，將統計數量扣除
+            // 縮小窗口，直到最大數字統計小於k ，此時left的左方為全部符合條件
             while (contMax == k) {
                 if (nums[left] == max) {
                     contMax--;
